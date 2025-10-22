@@ -23,7 +23,7 @@ A Laravel validation package for real estate spot management, providing comprehe
 Install the package via Composer:
 
 ```bash
-composer require Spot2/spot-validation
+composer require Spot2HQ/spot-validation
 ```
 
 ### Publish Configuration (Optional)
@@ -48,7 +48,7 @@ This will create a `config/spot-validation.php` file where you can customize:
 The package provides a `SpotRequest` form request class that handles all validation:
 
 ```php
-use Spot2\SpotValidation\Http\Requests\SpotRequest;
+use Spot2HQ\SpotValidation\Http\Requests\SpotRequest;
 
 class SpotController extends Controller
 {
@@ -75,9 +75,9 @@ class SpotController extends Controller
 All catalogs are available as type-safe enums:
 
 ```php
-use Spot2\SpotValidation\Enums\Spot\BuildingTypeEnum;
-use Spot2\SpotValidation\Enums\Spot\Price\PriceTypeEnum;
-use Spot2\SpotValidation\Enums\Spot\SpotStateEnum;
+use Spot2HQ\SpotValidation\Enums\Spot\BuildingTypeEnum;
+use Spot2HQ\SpotValidation\Enums\Spot\Price\PriceTypeEnum;
+use Spot2HQ\SpotValidation\Enums\Spot\SpotStateEnum;
 
 // Get all enum values
 $buildingTypes = BuildingTypeEnum::getValues(); // [1, 2, 3, 4]
@@ -127,8 +127,8 @@ You can also use individual validation rule traits in your own form requests:
 
 ```php
 use Illuminate\Foundation\Http\FormRequest;
-use Spot2\SpotValidation\Http\Requests\Rules\SharedRules;
-use Spot2\SpotValidation\Http\Requests\Rules\IndustrialRules;
+use Spot2HQ\SpotValidation\Http\Requests\Rules\SharedRules;
+use Spot2HQ\SpotValidation\Http\Requests\Rules\IndustrialRules;
 
 class CustomSpotRequest extends FormRequest
 {
@@ -194,7 +194,7 @@ Quick example for custom exchange rate provider:
 
 ```php
 // app/Providers/AppServiceProvider.php
-use Spot2\SpotValidation\Contracts\ExchangeRateProviderInterface;
+use Spot2HQ\SpotValidation\Contracts\ExchangeRateProviderInterface;
 use App\Services\CustomExchangeRateProvider;
 
 public function register(): void
@@ -267,7 +267,7 @@ composer format-test
 
 ## License
 
-This package is proprietary software developed by Spot2.
+This package is proprietary software developed by Spot2HQ.
 
 ## Support
 
