@@ -23,7 +23,7 @@ A Laravel validation package for real estate spot management, providing comprehe
 Install the package via Composer:
 
 ```bash
-composer require Spot2HQ/spot-validation
+composer require spot2-hq/spot-validation
 ```
 
 ### Publish Configuration (Optional)

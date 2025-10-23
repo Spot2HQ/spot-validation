@@ -214,21 +214,7 @@ vendor/bin/phpunit --filter it_has_correct_enum_values
 
 ## Key Testing Principles
 
-### 1. No Database Dependencies
-
-All tests run without requiring database setup:
-- Database-dependent rules (like `exists:table,id`) are removed in tests
-- Tests focus on validation logic, not database integrity
-- Mock data is used instead of database records
-
-Example:
-```php
-$rules = $request->rules();
-unset($rules['zip_code_id']); // Remove DB-dependent rule
-$validator = Validator::make($data, $rules);
-```
-
-### 2. Partial Validation Testing
+### 1. Partial Validation Testing
 
 The package uses a **partial validation approach** with the `ValidationRuleExtractor` helper:
 - Tests extract actual validation rules from traits
